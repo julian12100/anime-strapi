@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "animes",
+  "info": {
+    "singularName": "anime",
+    "pluralName": "animes",
+    "displayName": "animes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true
+    },
+    "sinopsis": {
+      "type": "text",
+      "required": true
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mega": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "Titulo"
+    },
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "temporada": {
+      "type": "string",
+      "required": true
+    },
+    "capitulos": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Finalizado",
+        "En Emisión"
+      ],
+      "required": true
+    },
+    "genero": {
+      "type": "customField",
+      "options": [
+        "accion",
+        "comedia",
+        "terror"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "demografia": {
+      "type": "enumeration",
+      "enum": [
+        "Shonen",
+        "Seinen",
+        "Shojo",
+        "Josei",
+        "Kodomo"
+      ],
+      "required": true
+    },
+    "subtitulos": {
+      "type": "enumeration",
+      "enum": [
+        "Latino",
+        "Castellano",
+        "Ingles",
+        "N/A"
+      ],
+      "required": true
+    },
+    "Audio": {
+      "type": "enumeration",
+      "enum": [
+        "Español",
+        "Japones",
+        "Ingles",
+        "N/A"
+      ],
+      "required": true
+    },
+    "Formato": {
+      "type": "enumeration",
+      "enum": [
+        "Mp4",
+        "Flv",
+        "Avi"
+      ],
+      "required": true
+    },
+    "fansub": {
+      "type": "string",
+      "required": true
+    },
+    "resolucion": {
+      "type": "string",
+      "required": true
+    },
+    "mediafire": {
+      "type": "string"
+    }
+  }
+}
